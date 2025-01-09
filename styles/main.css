@@ -1,4 +1,42 @@
-section{
-    height: 100vh;
-    display: flex;
+:root {
+	--bg: #000201;
+	--greenerBg: #0c0e0d;
+	--text: #f2f2f2;
+	--accent1: #59dafb;
+	--accent2: #a5fb59;
+}
+
+.trbl-green {
+    border-radius: 15px;
+	background: var(--greenerBg);
+}
+
+.trbl-green::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	background: linear-gradient(to bottom left, var(--accent2), var(--bg) 35%);
+    z-index: -1;
+    border-radius: inherit;
+    margin: -2px;
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+	font-family: Satoshi;
+	margin: 0;
+}
+
+.hori {
+	display: flex;
+	flex-direction: row;
+}
+
+.vert {
+	display: flex;
+	flex-direction: column;
 }
