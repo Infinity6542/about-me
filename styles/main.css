@@ -40,3 +40,29 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+
+.absolute {
+	position: absolute;
+}
+
+.fixed {
+	position: fixed;
+}
+
+#followCursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 10px;
+	width: 10px;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	right: 50%;
+	z-index: 1;
+}
+
+/** Colours */
+.accentBlue {
+	color: var(--accent1);
+	background: var(--accent1);
+}

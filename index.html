@@ -4,11 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Not there yet...</title>
+		<link rel="stylesheet" href="/styles/main.css">
+		<script src="https://www.unpkg.com/spltjs@1.1.0" type="module"></script>
+		<script src="/scripts/main.js" type="module" defer></script>
 	</head>
 	<body>
 		<div id="foreground">
-			<div id="follow-cursor" class="load"></div>
-			<h1 id="loading">Hi. I'm James.</h1>
+			<div id="followCursor" class="load loading fixed accentBlue"></div>
+			<h1 id="loading" class="loading">Hi. I'm James.</h1>
 		</div>
 		<section id="hero">
 			<div class="grid">
@@ -23,14 +26,14 @@
 				</div>
 				<div class="empty"></div>
 				<div class="heroBodyText">
-					<p>
+					<p class="absolute desc">
 						Pleased to meet you. I’m 15 years old and based in Sydney,
 						Australia. I mostly create open-source projects, which I both design
 						and produce. At the moment, I’m learning C++ with skillsets in web
 						development & design, graphics design, various fields of technology
 						and photography.
 					</p>
-					<p>
+					<p class="absolute desc">
 						Pleased to meet you. I’m 15 years old and based in Sydney,
 						Australia. I mostly create open-source projects, which I both design
 						and produce. At the moment, I’m learning C++ with skillsets in web
