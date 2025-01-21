@@ -1,3 +1,4 @@
+/** Colours */
 :root {
 	--bg: #000201;
 	--greenerBg: #0c0e0d;
@@ -22,6 +23,11 @@
     z-index: -1;
     border-radius: inherit;
     margin: -2px;
+}
+
+/** Structure & layout */
+section {
+	height: 100vh;
 }
 
 body {
@@ -49,15 +55,23 @@ body {
 	position: fixed;
 }
 
+/** Font */
+.fancy {
+	font-family: playfairDisplay;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+/** Shapes */
+.circle {
+	border-radius: 100%;
+}
+
+/** Behaviour */
 #followCursor {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 10px;
-	width: 10px;
 	transform: translate(-50%, -50%);
-	left: 50%;
-	right: 50%;
 	z-index: 1;
 }
 
@@ -65,4 +79,38 @@ body {
 .accentBlue {
 	color: var(--accent1);
 	background: var(--accent1);
+}
+
+/** Appearance */
+.hidden {
+	display: none;
+	user-select: none;
+	pointer-events: none;
+}
+
+ /** Loading screen */
+#foreground {
+	overflow: hidden;
+}
+
+#followCursor {
+	height: 250vw;
+	width: 250vw;
+}
+
+#loading {
+	position: fixed;
+	color: var(--bg);
+	z-index: 9;
+	top: 50%;
+	left: 50%;
+	transform: translate(0, -50%);
+}
+
+#loading > span {
+	position: relative;
+	display: inline-block;
+	z-index: 9;
+	filter: blur(100px);
+	transform: translateY(-50%);
 }
