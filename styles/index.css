@@ -8,45 +8,59 @@
 
 .heroTxt {
 	float: right;
-
 }
 
 .heroTxt h1 {
 	display: flex;
-    flex-direction: column;
-    text-align: right;
-    line-height: 90%;
+	flex-direction: column;
+	text-align: right;
+	line-height: 90%;
 }
 
 .heroTxt h1 > * {
 	flex: 1;
 }
 
-/* #hero .heroBodyText {
-} */
+#hero .heroBodyText {
+	position: relative;
+	top: 100%;
+	transform: translateY(-100%);
+	width: 50%;
+}
+
+#hero .desc{
+/* opacity: 0; */
+}
+
+#hero .desc::before {
+	content: "Pleased to meet you. I’m 15 years old and based in Sydney, Australia. I mostly create open-source projects, which I both design and produce. At the moment, I’m learning C++ with skillsets in web development & design, graphics design, various fields of technology and photography. ";
+	position: absolute;
+    z-index: -1;
+    opacity: .4;
+}
 
 #role {
-    --content: '|';
-    --animation: blink .5s infinite linear alternate;
-    margin-top: -20px;
-    margin-right: -20px;
-    padding: 20px;
-    padding-right: 0;
-    z-index: -1;
+	--content: "|";
+	--animation: blink 0.5s infinite linear alternate;
+	margin-top: -20px;
+	margin-right: -20px;
+	padding: 20px;
+	padding-right: 0;
+	z-index: -1;
 }
 
 #role::after {
-    font-weight: 300;
-    margin-left: -10px;
-    content: var(--content);
-    animation: var(--animation);
+	font-weight: 300;
+	margin-left: -10px;
+	content: var(--content);
+	animation: var(--animation);
 }
 
 @keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: .75;
-    }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.75;
+	}
 }

@@ -38,7 +38,6 @@ const typewriter = async () => {
 			writeTo.innerText = word.substring(0, i + 1);
 			await sleep(delay);
 		}
-
 		writeTo.style.setProperty(
 			"--animation",
 			"blink .5s infinite linear alternate"
@@ -97,3 +96,4 @@ window.onpointermove = (event) => {
 };
 
 typewriter();
+splt({reveal: true});
