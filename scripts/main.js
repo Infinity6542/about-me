@@ -96,4 +96,5 @@ window.onpointermove = (event) => {
 };
 
 typewriter();
-splt({reveal: true});
+// splt({reveal: true});
+// animate(".reveal")
