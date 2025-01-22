@@ -8,21 +8,21 @@
 }
 
 .trbl-green {
-    border-radius: 15px;
+	border-radius: 15px;
 	background: var(--greenerBg);
 }
 
 .trbl-green::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	background: linear-gradient(to bottom left, var(--accent2), var(--bg) 35%);
-    z-index: -1;
-    border-radius: inherit;
-    margin: -2px;
+	z-index: -1;
+	border-radius: inherit;
+	margin: -2px;
 }
 
 /** Structure & layout */
@@ -35,6 +35,10 @@ body {
 	color: var(--text);
 	font-family: Satoshi;
 	margin: 0;
+}
+
+.flex {
+	display: flex;
 }
 
 .hori {
@@ -56,12 +60,34 @@ body {
 }
 
 /** Font */
+p, h1, h2, h3, h4, span {
+	margin-top: 0;
+}
+
+h1 {
+	font-family: Satoshi Variable;
+	font-weight: 700;
+	font-size: 5em;
+}
+
 .fancy {
 	font-family: playfairDisplay;
 }
 
-h1 {
-	font-size: 4em;
+.accentBlue {
+	color: var(--accent1);
+}
+
+.halfAccentBlue {
+	background: linear-gradient(180deg, var(--text) 60%, var(--accent1) 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+/** Colours */
+.bgAccentBlue {
+	background: var(--accent1);
 }
 
 /** Shapes */
@@ -73,12 +99,6 @@ h1 {
 #followCursor {
 	transform: translate(-50%, -50%);
 	z-index: 1;
-}
-
-/** Colours */
-.accentBlue {
-	color: var(--accent1);
-	background: var(--accent1);
 }
 
 /** Appearance */
