@@ -15,6 +15,7 @@
 	flex-direction: column;
 	text-align: right;
 	line-height: 90%;
+	margin-bottom: -.35em;
 }
 
 .heroTxt h1 > * {
@@ -63,4 +64,11 @@
 	100% {
 		opacity: 0.75;
 	}
+}
+
+.sfx:has(svg) {
+	position: relative;
+	height: 20px;
+	width: 20px;
+	margin-left: auto;
 }
