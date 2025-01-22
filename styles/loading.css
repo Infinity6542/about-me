@@ -1,0 +1,27 @@
+/** Loading screen */
+#foreground {
+	overflow: hidden;
+}
+
+#followCursor {
+	height: 250vw;
+	width: 250vw;
+}
+
+#loading {
+	position: fixed;
+	color: var(--bg);
+	z-index: 9;
+	top: 50%;
+	left: 50%;
+	transform: translate(0, -50%);
+}
+
+#loading > span {
+	position: relative;
+	display: inline-block;
+	z-index: 9;
+	opacity: 0;
+	filter: blur(10px);
+	transform: translate(0, -50%);
+}

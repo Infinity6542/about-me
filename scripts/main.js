@@ -12,10 +12,10 @@ const circle = document.getElementById("followCursor");
 const loaderSequence = [
 	[
 		"#loading > span",
-		{ filter: "blur(0px)" },
+		{ filter: "blur(0px)", opacity: 1 },
 		{
 			delay: stagger(2),
-			ease: "cubic-bezier(.31,-0.01,.07,1.02)",
+			ease: "ease-in",
 			duration: 1,
 		},
 	],
