@@ -42,7 +42,7 @@ const typewriter = async () => {
 			"--animation",
 			"blink .5s infinite linear alternate"
 		);
-		await sleep(delay * 15);
+		await sleep(delay * 25);
 
 		// Make it look selected for rewrite
 		writeTo.style.background = "#0078d7";
@@ -50,7 +50,7 @@ const typewriter = async () => {
 			"--content",
 			'|'
 		);
-		await sleep(300);
+		await sleep(250);
 
 		// Delete the word
 

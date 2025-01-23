@@ -82,8 +82,16 @@ p {
 	color: var(--accent1);
 }
 
-.halfAccentBlue {
-	background: linear-gradient(180deg, var(--text) 60%, var(--accent1) 90%);
+.blue {
+	--accent: var(--accent1);
+}
+
+.green {
+	--accent: var(--accent2);
+}
+
+.halfAccent {
+	background: linear-gradient(180deg, var(--text) 60%, var(--accent) 90%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
