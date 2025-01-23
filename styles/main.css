@@ -28,6 +28,9 @@
 /** Structure & layout */
 section {
 	height: 100vh;
+	width: 110em;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 body {
@@ -35,6 +38,7 @@ body {
 	color: var(--text);
 	font-family: Satoshi;
 	margin: 0;
+	overflow-x: hidden;
 }
 
 .flex {

@@ -3,7 +3,7 @@
 }
 
 #hero > div {
-	padding: 15em 10em;
+	padding: 10em 0;
 }
 
 .heroTxt {
@@ -15,7 +15,7 @@
 	flex-direction: column;
 	text-align: right;
 	line-height: 90%;
-	margin-bottom: -.35em;
+	margin-bottom: -0.35em;
 }
 
 .heroTxt h1 > * {
@@ -29,8 +29,8 @@
 	width: 50%;
 }
 
-#hero .desc{
-/* opacity: 0; */
+#hero .desc {
+	/* opacity: 0; */
 }
 
 /* #hero .desc::before {
@@ -72,4 +72,48 @@
 	width: 20px;
 	margin-left: auto;
 	margin-right: 16px;
+}
+
+/* the next thing */
+
+#about {
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+}
+
+#about h1 {
+	transform: translateY(-25%);
+}
+
+.flyBy {
+	position: absolute;
+	transform: translateY(10em);
+	animation: fly 100s linear infinite;
+}
+
+@keyframes fly {
+	from {
+		transform: translate(0, 10em);
+	}
+	to {
+		transform: translate(-50%, 10em);
+	}
+}
+
+.flyBy ul {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.flyBy li {
+	list-style: none;
+	font-size: 2em;
+	white-space: nowrap;
+}
+
+.flyBy li::before {
+	content: "•";
+	margin-right: 20px;
 }
