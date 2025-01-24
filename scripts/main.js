@@ -118,18 +118,16 @@ e.addEventListener("click", (event) => {
 		return;
 	}
 
-
 	function calcPos(e) {
-		let xy = e.getBoundingClientRect(),
-			x = (xy.left + xy.right) / 2,
-			y = xy.bottom;
-		return x, y;
+		let xy = e.getBoundingClientRect();
+		return [xy.left, xy.bottom];
 	}
 	const x = document.createElement("div");
 	x.id = "dropdown";
 	document.body.insertBefore(x, document.body.nextSibling);
 	const y = document.querySelector("#dropdown");
 	y.style.position = "absolute";
-	y.style.top = `${calcPos(e).y}px`;
-	y.style.left = `${calcPos(e).x}px`;
+	y.style.top = `calc(200vh + ${calcPos(e)[1]}px)`;
+	y.style.left = `${calcPos(e)[0]}px`;
+	// y.style.width = "100px";
 });
