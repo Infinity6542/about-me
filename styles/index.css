@@ -37,10 +37,6 @@ section {
 	width: 50%;
 }
 
-#hero .desc {
-	/* opacity: 0; */
-}
-
 /* #hero .desc::before {
 	content: "Pleased to meet you. I’m 15 years old and based in Sydney, Australia. I mostly create open-source projects, which I both design and produce. At the moment, I’m learning C++ with skillsets in web development & design, graphics design, various fields of technology and photography. ";
 	position: absolute;
