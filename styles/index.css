@@ -1,3 +1,11 @@
+html {
+	scroll-snap-type: y mandatory;
+}
+
+section {
+	scroll-snap-align: start;
+}
+
 #hero {
 	flex: 1;
 }
@@ -116,4 +124,31 @@
 .flyBy li::before {
 	content: "•";
 	margin-right: 20px;
+}
+
+/** Progression section */
+#next {
+	align-items: center;
+	justify-content: center;
+}
+
+#next > div {
+	height: 100%;
+	display: grid;
+}
+
+#next p {
+	margin: auto;
+	justify-self: flex-start;
+}
+
+#next .container {
+	justify-self: flex-end;
+}
+
+#next select, #next select * {
+	font-size: 5em;
+}
+
+#next select {
 }

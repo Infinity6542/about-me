@@ -74,6 +74,12 @@ h1 {
 	font-size: 7em;
 }
 
+h2 {
+	font-family: Satoshi Variable;
+	font-weight: 700;
+	font-size: 4em;
+}
+
 p {
 	font-size: 1.5em;
 }
