@@ -27,10 +27,7 @@ const typewriter = async () => {
 		let delay = 80;
 
 		// Write the word
-		writeTo.style.setProperty(
-			"--content",
-			''
-		);
+		writeTo.style.setProperty("--content", "");
 		writeTo.style.setProperty("--animation", "none");
 		for (let i = 0; i < word.length; i++) {
 			if (writeTo.style.background !== "transparent")
@@ -46,10 +43,7 @@ const typewriter = async () => {
 
 		// Make it look selected for rewrite
 		writeTo.style.background = "#0078d7";
-		writeTo.style.setProperty(
-			"--content",
-			'|'
-		);
+		writeTo.style.setProperty("--content", "|");
 		await sleep(250);
 
 		// Delete the word
@@ -98,3 +92,44 @@ window.onpointermove = (event) => {
 typewriter();
 // splt({reveal: true});
 // animate(".reveal")
+
+// Select
+let e = document.getElementById("select");
+let options = [];
+
+e.getAttribute("data-options")
+	.split(",")
+	.forEach((option) => {
+		options.push(option);
+	});
+
+if (e.getAttribute("data-current") === "") {
+	e.setAttribute("data-current", 0);
+	e.innerText = options[0];
+}
+
+e.addEventListener("click", (event) => {
+	event.preventDefault();
+	console.log("click!");
+
+	// If a menu is already open, close it
+	if (document.querySelectorAll("#dropdown").length === 1) {
+		document.querySelector("#dropdown").remove();
+		return;
+	}
+
+
+	function calcPos(e) {
+		let xy = e.getBoundingClientRect(),
+			x = (xy.left + xy.right) / 2,
+			y = xy.bottom;
+		return x, y;
+	}
+	const x = document.createElement("div");
+	x.id = "dropdown";
+	document.body.insertBefore(x, document.body.nextSibling);
+	const y = document.querySelector("#dropdown");
+	y.style.position = "absolute";
+	y.style.top = `${calcPos(e).y}px`;
+	y.style.left = `${calcPos(e).x}px`;
+});
