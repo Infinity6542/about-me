@@ -146,9 +146,23 @@ section {
 	justify-self: flex-end;
 }
 
-#next select, #next select * {
-	font-size: 5em;
+#next .container {
+	white-space: nowrap;
 }
 
-#next select {
+#next #select {
+	display: inline-block;
+	width: 320px;
+	border: solid 5px;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-image: linear-gradient(90deg,var(--accent1), var(--accent2)) 10;
+}
+
+#next #select::after {
+	content: 'v';
+	float: right;
+	margin-right: 10px;
+	font-weight: 300;
 }
