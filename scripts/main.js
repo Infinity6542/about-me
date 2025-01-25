@@ -27,6 +27,7 @@ const typewriter = async () => {
 		let delay = 80;
 
 		// Write the word
+		// No blink while writing
 		writeTo.style.setProperty("--content", "");
 		writeTo.style.setProperty("--animation", "none");
 		for (let i = 0; i < word.length; i++) {
@@ -35,10 +36,13 @@ const typewriter = async () => {
 			writeTo.innerText = word.substring(0, i + 1);
 			await sleep(delay);
 		}
+
+		// Blink after the word is written
 		writeTo.style.setProperty(
 			"--animation",
 			"blink .5s infinite linear alternate"
 		);
+
 		await sleep(delay * 25);
 
 		// Make it look selected for rewrite
@@ -46,7 +50,7 @@ const typewriter = async () => {
 		writeTo.style.setProperty("--content", "|");
 		await sleep(250);
 
-		// Delete the word
+		// Word is deleted upon being rewritten
 
 		// Cycle
 		if (index === roles.length - 1) index = 0;
