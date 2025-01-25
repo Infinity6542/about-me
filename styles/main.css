@@ -102,7 +102,7 @@ p {
 }
 
 .halfAccent {
-	background: linear-gradient(180deg, var(--text) 60%, var(--accent) 90%);
+	background: linear-gradient(180deg, var(--text) 50%, var(--accent) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
