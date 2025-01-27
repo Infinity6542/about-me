@@ -40,7 +40,7 @@ const typewriter = async () => {
 		// Blink after the word is written
 		writeTo.style.setProperty(
 			"--animation",
-			"blink .5s infinite linear alternate"
+			"blink .35s infinite linear alternate"
 		);
 
 		await sleep(delay * 25);
@@ -114,7 +114,6 @@ if (e.getAttribute("data-current") === "") {
 
 e.addEventListener("click", (event) => {
 	event.preventDefault();
-	console.log("click!");
 
 	// If a menu is already open, close it
 	if (document.querySelectorAll("#dropdown").length === 1) {
@@ -133,5 +132,39 @@ e.addEventListener("click", (event) => {
 	y.style.position = "absolute";
 	y.style.top = `calc(200vh + ${calcPos(e)[1]}px)`;
 	y.style.left = `${calcPos(e)[0]}px`;
+	y.classList.add("flex");
+	y.classList.add("vert");
+	y.style.marginTop = "10px";
+	y.style.padding = "5px";
+	y.style.borderRadius = "6px";
+	y.style.gap = "5px";
+	y.style.border = "1px solid var(--dimText)";
 	// y.style.width = "100px";
+	for (let i = 0; i < options.length; i++) {
+		let child = document.createElement("a");
+
+		// divider
+		let divider = document.createElement("hr");
+		divider.style.width = "100%";
+
+		child.innerText = options[i].charAt(0).toUpperCase() + options[i].slice(1);
+		child.href = `${options[i]}.html`;
+		child.style.textDecoration = "none";
+		child.style.color = "var(--text)";
+		child.style.padding = "5px 50px 5px 20px";
+		child.style.lineHeight = "1.5";
+		child.style.borderRadius = "4px";
+		child.addEventListener("mouseover", (event) => {
+			event.target.style.transition = ".2s all ease-in-out";
+			event.target.style.background = "var(--dimText)";
+		});
+		child.addEventListener("mouseout", (event) => {
+			event.target.style.background = "transparent";
+		});
+		y.appendChild(child);
+		// if (i >= options.length - 1) {
+		// 	return;
+		// }
+		// y.insertBefore(divider, y.nextSibling);
+	}
 });
