@@ -139,11 +139,11 @@ e.addEventListener("click", (event) => {
 	x.id = "dropdown";
 	document.body.insertBefore(x, document.body.nextSibling);
 	const y = document.querySelector("#dropdown");
+	y.classList.add("flex");
+	y.classList.add("vert");
 	y.style.position = "absolute";
 	y.style.top = `calc(200vh + ${calcPos(e)[1]}px)`;
 	y.style.left = `${calcPos(e)[0]}px`;
-	y.classList.add("flex");
-	y.classList.add("vert");
 	y.style.opacity = "0";
 	y.style.transform = "scale(.8)";
 	y.style.marginTop = "10px";
