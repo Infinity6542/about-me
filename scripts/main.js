@@ -117,9 +117,11 @@ e.addEventListener("click", (event) => {
 	event.stopPropagation();
 
 	function closeMenu() {
-		animate("#dropdown", { opacity: 0, scale: .8 }, { duration: 0.1 }).then(() => {
-			document.querySelector("#dropdown").remove();
-		});
+		animate("#dropdown", { opacity: 0, scale: 0.8 }, { duration: 0.1 }).then(
+			() => {
+				document.querySelector("#dropdown").remove();
+			}
+		);
 		return;
 	}
 
@@ -160,7 +162,16 @@ e.addEventListener("click", (event) => {
 		divider.style.width = "100%";
 
 		child.innerText = options[i].charAt(0).toUpperCase() + options[i].slice(1);
-		child.href = `${options[i]}.html`;
+		child.href = `javascript:void`;
+		child.onclick = (event) => {
+			animate(
+				circle,
+				{ height: "250vw", width: "250vw" },
+				{ duration: 0.5 }
+			).then(() => {
+				window.location = `/${options[i]}.html`;
+			});
+		};
 		child.style.textDecoration = "none";
 		child.style.color = "var(--text)";
 		child.style.padding = "5px 50px 5px 20px";
