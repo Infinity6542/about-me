@@ -154,6 +154,7 @@ section {
 	border-left: 0;
 	border-right: 0;
 	border-image: linear-gradient(90deg,var(--accent1), var(--accent2)) 10;
+	cursor: pointer;
 }
 
 #next #select::after {
