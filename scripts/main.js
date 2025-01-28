@@ -170,7 +170,8 @@ e.addEventListener("click", (event) => {
 				{ height: "250vw", width: "250vw" },
 				{ duration: 0.5 }
 			).then(() => {
-				window.location = `/${options[i].replace(" ", "-")}.html`;
+				// window.location = `/${options[i].replace(" ", "-")}.html`;
+				window.alert("This part isn't quite ready yet...");
 			});
 		};
 		child.style.textDecoration = "none";
