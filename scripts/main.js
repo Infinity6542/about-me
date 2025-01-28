@@ -1,6 +1,7 @@
 import {
 	animate,
 	stagger,
+	hover
 } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
 
 function sleep(ms) {
@@ -200,4 +201,13 @@ e.addEventListener("click", (event) => {
 	y.addEventListener("click", (event) => {
 		event.stopPropagation();
 	});
+});
+hover("a", (el) => {
+	const a = animate(
+		circle,
+		{ height: "20px", width: "20px" },
+		{ duration: 1, ease: "ease-out" }
+	);
+
+	return () => a.stop();
 });
