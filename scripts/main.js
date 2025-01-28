@@ -114,10 +114,18 @@ if (e.getAttribute("data-current") === "") {
 
 e.addEventListener("click", (event) => {
 	event.preventDefault();
+	event.stopPropagation();
+
+	function closeMenu() {
+		animate("#dropdown", { opacity: 0, scale: .8 }, { duration: 0.1 }).then(() => {
+			document.querySelector("#dropdown").remove();
+		});
+		return;
+	}
 
 	// If a menu is already open, close it
 	if (document.querySelectorAll("#dropdown").length === 1) {
-		document.querySelector("#dropdown").remove();
+		closeMenu();
 		return;
 	}
 
@@ -134,11 +142,15 @@ e.addEventListener("click", (event) => {
 	y.style.left = `${calcPos(e)[0]}px`;
 	y.classList.add("flex");
 	y.classList.add("vert");
+	y.style.opacity = "0";
+	y.style.transform = "scale(.8)";
 	y.style.marginTop = "10px";
 	y.style.padding = "5px";
 	y.style.borderRadius = "6px";
 	y.style.gap = "5px";
 	y.style.border = "1px solid var(--dimText)";
+	animate(y, { opacity: 1, scale: 1 }, { duration: 0.1 });
+	y.focus();
 	// y.style.width = "100px";
 	for (let i = 0; i < options.length; i++) {
 		let child = document.createElement("a");
@@ -167,4 +179,12 @@ e.addEventListener("click", (event) => {
 		// }
 		// y.insertBefore(divider, y.nextSibling);
 	}
+	sleep(200).then(() => {
+		document.body.addEventListener("click", (event) => {
+			closeMenu();
+		});
+	});
+	y.addEventListener("click", (event) => {
+		event.stopPropagation();
+	});
 });

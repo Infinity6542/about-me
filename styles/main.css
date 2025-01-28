@@ -133,3 +133,13 @@ p {
 	user-select: none;
 	pointer-events: none;
 }
+
+/** Keyframes */
+@keyframes scale {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
