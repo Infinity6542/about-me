@@ -109,6 +109,13 @@ p {
 	background-clip: text;
 }
 
+.halfAccentTop {
+	background: linear-gradient(0, var(--text) 30%, var(--accent) 80%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
 /** Colours */
 .bgAccentBlue {
 	background: var(--accent1);
