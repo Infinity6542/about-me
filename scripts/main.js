@@ -164,6 +164,7 @@ e.addEventListener("click", (event) => {
 		child.innerText = options[i].charAt(0).toUpperCase() + options[i].slice(1);
 		child.href = `javascript:void`;
 		child.onclick = (event) => {
+			e.innerText = options[i];
 			animate(
 				circle,
 				{ height: "250vw", width: "250vw" },
