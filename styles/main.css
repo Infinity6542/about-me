@@ -66,7 +66,12 @@ body {
 }
 
 /** Font */
-p, h1, h2, h3, h4, span {
+p,
+h1,
+h2,
+h3,
+h4,
+span {
 	margin-top: 0;
 }
 
@@ -135,6 +140,11 @@ p {
 }
 
 /** Appearance */
+.mobileOnly {
+	display: none;
+	user-select: none;
+}
+
 .hidden {
 	display: none;
 	user-select: none;
@@ -148,5 +158,49 @@ p {
 	}
 	to {
 		transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 1230px) {
+
+	
+	body *:not(.mobileOnly) {
+		display: none;
+		user-select: none;
+	}
+
+	.mobileOnly {
+		margin-top: 15vw;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		display: block;
+		user-select: text;
+		text-align: center;
+		padding: 20vh 15vw;
+	}
+
+	.mobileOnly * {
+		display: block !important;
+		user-select: text !important;
+	}
+
+	h1 {
+		font-size: 4em;
+		overflow-wrap: break-word;
+	}
+
+	p {
+		font-size: 1em;
+		opacity: 75%;
+	}
+
+	img {
+		transform: scale(5);
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 100px;
+		filter: invert(92%) sepia(13%) saturate(400%) hue-rotate(155deg) brightness(99%) contrast(94%);
 	}
 }
