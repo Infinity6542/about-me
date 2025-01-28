@@ -169,7 +169,7 @@ e.addEventListener("click", (event) => {
 				{ height: "250vw", width: "250vw" },
 				{ duration: 0.5 }
 			).then(() => {
-				window.location = `/${options[i]}.html`;
+				window.location = `/${options[i].replace(" ", "-")}.html`;
 			});
 		};
 		child.style.textDecoration = "none";
