@@ -140,23 +140,25 @@ e.addEventListener("click", (event) => {
 	x.id = "dropdown";
 	document.body.insertBefore(x, document.body.nextSibling);
 	const y = document.querySelector("#dropdown");
+	const yStyle = y.style;
 	y.classList.add("flex");
 	y.classList.add("vert");
-	y.style.position = "absolute";
-	y.style.top = `calc(200vh + ${calcPos(e)[1]}px)`;
-	y.style.left = `${calcPos(e)[0]}px`;
-	y.style.opacity = "0";
-	y.style.transform = "scale(.8)";
-	y.style.marginTop = "10px";
-	y.style.padding = "5px";
-	y.style.borderRadius = "6px";
-	y.style.gap = "5px";
-	y.style.border = "1px solid var(--dimText)";
+	yStyle.position = "absolute";
+	yStyle.top = `calc(200vh + ${calcPos(e)[1]}px)`;
+	yStyle.left = `${calcPos(e)[0]}px`;
+	yStyle.opacity = "0";
+	yStyle.transform = "scale(.8)";
+	yStyle.marginTop = "10px";
+	yStyle.padding = "5px";
+	yStyle.borderRadius = "6px";
+	yStyle.gap = "5px";
+	yStyle.border = "1px solid var(--dimText)";
 	animate(y, { opacity: 1, scale: 1 }, { duration: 0.1 });
 	y.focus();
 	// y.style.width = "100px";
 	for (let i = 0; i < options.length; i++) {
 		let child = document.createElement("a");
+		let childStyle = child.style;
 
 		// divider
 		let divider = document.createElement("hr");
@@ -175,11 +177,11 @@ e.addEventListener("click", (event) => {
 				window.alert("This part isn't quite ready yet...");
 			});
 		};
-		child.style.textDecoration = "none";
-		child.style.color = "var(--text)";
-		child.style.padding = "5px 50px 5px 20px";
-		child.style.lineHeight = "1.5";
-		child.style.borderRadius = "3px";
+		childStyle.textDecoration = "none";
+		childStyle.color = "var(--text)";
+		childStyle.padding = "5px 50px 5px 20px";
+		childStyle.lineHeight = "1.5";
+		childStyle.borderRadius = "3px";
 		child.addEventListener("mouseover", (event) => {
 			event.target.style.transition = ".2s all ease-in-out";
 			event.target.style.background = "var(--dimText)";
