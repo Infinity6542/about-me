@@ -57,6 +57,22 @@ const typewriter = async () => {
 		// Cycle
 		if (index === roles.length - 1) index = 0;
 		else index++;
+
+		// Ball turns into line
+		hover(writeTo, () => {
+			animate(
+				circle,
+				{ height: "50px", width: "5px", borderRadius: "5px" },
+				{ duration: 0.25, ease: "ease-out" }
+			);
+
+			return () =>
+				animate(
+					circle,
+					{ height: "10px", width: "10px", borderRadius: "50%" },
+					{ duration: 0.25, ease: "ease-out" }
+				);
+		});
 	}
 };
 
