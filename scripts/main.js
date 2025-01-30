@@ -1,7 +1,8 @@
 import {
 	animate,
 	stagger,
-	hover
+	hover,
+	spring,
 } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
 
 function sleep(ms) {
@@ -203,13 +204,18 @@ e.addEventListener("click", (event) => {
 	y.addEventListener("click", (event) => {
 		event.stopPropagation();
 	});
-});
-hover("a", (el) => {
-	const a = animate(
-		circle,
-		{ height: "20px", width: "20px" },
-		{ duration: 1, ease: "ease-out" }
-	);
+	hover("a", (el) => {
+		animate(
+			circle,
+			{ height: "20px", width: "20px" },
+			{ duration: 0.75, type: "spring", bounce: 0.7 }
+		);
 
-	return () => a.stop();
+		return (endEvent) =>
+			animate(
+				circle,
+				{ height: "10px", width: "10px" },
+				{ duration: 0.75, type: "spring", bounce: 0.7 }
+			);
+	});
 });
