@@ -28,6 +28,11 @@ const typewriter = async () => {
 		let word = roles[index];
 		let delay = 80;
 
+		Object.assign(writeTo.style, {
+			position: "relative",
+			zIndex: "-1",
+		});
+
 		// Write the word
 		// No blink while writing
 		writeTo.style.setProperty("--content", "");
