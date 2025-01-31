@@ -157,25 +157,25 @@ e.addEventListener("click", (event) => {
 	x.id = "dropdown";
 	document.body.insertBefore(x, document.body.nextSibling);
 	const y = document.querySelector("#dropdown");
-	const yStyle = y.style;
+	Object.assign(y.style, {
+		position: "absolute",
+		top: `calc(200vh + ${calcPos(e)[1]}px)`,
+		left: `${calcPos(e)[0]}px`,
+		opacity: "0",
+		transform: "scale(.8)",
+		marginTop: "10px",
+		padding: "5px",
+		borderRadius: "6px",
+		gap: "5px",
+		border: "1px solid var(--dimText)",
+	});
 	y.classList.add("flex");
 	y.classList.add("vert");
-	yStyle.position = "absolute";
-	yStyle.top = `calc(200vh + ${calcPos(e)[1]}px)`;
-	yStyle.left = `${calcPos(e)[0]}px`;
-	yStyle.opacity = "0";
-	yStyle.transform = "scale(.8)";
-	yStyle.marginTop = "10px";
-	yStyle.padding = "5px";
-	yStyle.borderRadius = "6px";
-	yStyle.gap = "5px";
-	yStyle.border = "1px solid var(--dimText)";
 	animate(y, { opacity: 1, scale: 1 }, { duration: 0.1 });
 	y.focus();
 	// y.style.width = "100px";
 	for (let i = 0; i < options.length; i++) {
 		let child = document.createElement("a");
-		let childStyle = child.style;
 
 		// divider
 		let divider = document.createElement("hr");
@@ -194,11 +194,13 @@ e.addEventListener("click", (event) => {
 				window.alert("This part isn't quite ready yet...");
 			});
 		};
-		childStyle.textDecoration = "none";
-		childStyle.color = "var(--text)";
-		childStyle.padding = "5px 50px 5px 20px";
-		childStyle.lineHeight = "1.5";
-		childStyle.borderRadius = "3px";
+		child.style.cssText += `
+		textDecoration = "none";
+		color = "var(--text)";
+		padding = "5px 50px 5px 20px";
+		lineHeight = "1.5";
+		borderRadius = "3px";
+		`;
 		child.addEventListener("mouseover", (event) => {
 			event.target.style.transition = ".2s all ease-in-out";
 			event.target.style.background = "var(--dimText)";
