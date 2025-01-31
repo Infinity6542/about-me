@@ -194,7 +194,7 @@ e.addEventListener("click", (event) => {
 				window.alert("This part isn't quite ready yet...");
 			});
 		};
-		Object.assign(y.style, {
+		Object.assign(child.style, {
 			textDecoration: "none",
 			color: "var(--text)",
 			padding: "5px 50px 5px 20px",
