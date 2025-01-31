@@ -194,13 +194,13 @@ e.addEventListener("click", (event) => {
 				window.alert("This part isn't quite ready yet...");
 			});
 		};
-		child.style.cssText += `
-		textDecoration = "none";
-		color = "var(--text)";
-		padding = "5px 50px 5px 20px";
-		lineHeight = "1.5";
-		borderRadius = "3px";
-		`;
+		Object.assign(y.style, {
+			textDecoration: "none",
+			color: "var(--text)",
+			padding: "5px 50px 5px 20px",
+			lineHeight: "1.5",
+			borderRadius: "3px",
+		});
 		child.addEventListener("mouseover", (event) => {
 			event.target.style.transition = ".2s all ease-in-out";
 			event.target.style.background = "var(--dimText)";
