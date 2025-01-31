@@ -59,7 +59,7 @@ const typewriter = async () => {
 		else index++;
 
 		// Ball turns into line
-		hover("h1", () => {
+		hover("h1:not(#h1)", () => {
 			animate(
 				circle,
 				{ height: "50px", width: "5px", borderRadius: "5px" },
