@@ -1,11 +1,36 @@
 import {
-    animate,
-    hover,
+	animate,
+	hover,
+	stagger
 } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
 
 function sleep(ms) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
+// Loader
+const loaderSequence = [
+	[
+		"#loading > span",
+		{ filter: "blur(0px)", opacity: 1 },
+		{
+			delay: stagger(2),
+			ease: "ease-in",
+			duration: 0.5,
+		},
+	],
+	[
+		"#followCursor",
+		{ height: "10px", width: "10px" },
+		{ delay: 0.5, ease: "cubic-bezier(.31,-0.01,.07,1.02)", duration: 1 },
+	],
+];
+
+sleep(1000).then(async () => {
+	await animate(loaderSequence).then(() =>
+		document.querySelector("#loading").classList.add("hidden")
+	);
+});
 
 // Next page
 async function prepForNextLoader(x) {
@@ -154,7 +179,7 @@ e.addEventListener("click", (event) => {
 				{ height: "250vw", width: "250vw" },
 				{ duration: 0.5 }
 			).then(() => {
-                prepForNextLoader(`/${options[i].replace(" ", "-")}.html`);
+				prepForNextLoader(`/${options[i].replace(" ", "-")}.html`);
 			});
 		};
 		Object.assign(child.style, {
