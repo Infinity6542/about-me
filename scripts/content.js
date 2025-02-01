@@ -42,3 +42,17 @@ hover("#proceed", () => {
 		circle.style.transform = "scale(1)";
 	};
 });
+
+document.querySelector("#proceed").addEventListener("click", async () => {
+	let sequence = [
+		[
+			"#introductory",
+			{ opacity: 0, translateY: -100 },
+			{ duration: .5, ease: "easeIn" },
+		],
+		[
+
+		]
+	];
+	animate(sequence);
+});

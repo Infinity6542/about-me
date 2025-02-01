@@ -1,3 +1,7 @@
+body {
+    /* overflow-y: hidden; */
+}
+
 #proceed {
     position: relative;
     top: 4px;
@@ -27,4 +31,42 @@
 #introductory p {
     font-weight: 500;
     opacity: 80%
+}
+
+.blurryThing {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 1500px;
+    background: var(--accent1);
+    border-radius: 50%;
+    filter: blur(300px);
+    opacity: 25%;
+}
+
+/* Card content */
+#items {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    outline: solid 2px red;
+    width: 50%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+    gap: 55px;
+}
+
+.card {
+    min-width: 300px;
+    max-width: 400px;
+    aspect-ratio: 6/7;
+    outline: solid 2px limegreen;
+    justify-self: center;
 }
