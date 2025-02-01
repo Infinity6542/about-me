@@ -25,7 +25,6 @@ const loaderSequence = [
 		{ delay: 0.5, ease: "cubic-bezier(.31,-0.01,.07,1.02)", duration: 1 },
 	],
 ];
-
 sleep(1000).then(async () => {
 	await animate(loaderSequence).then(() =>
 		document.querySelector("#loading").classList.add("hidden")
