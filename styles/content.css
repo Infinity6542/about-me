@@ -1,0 +1,30 @@
+#proceed {
+    position: relative;
+    top: 4px;
+    right: 7px;
+    transition: .25s ease-in;
+    cursor: pointer;
+}
+
+#proceed:hover {
+    right: 0;
+}
+
+#layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#introductory {
+    align-items: center;
+}
+
+#introductory h1 {
+    margin-bottom: 0;
+}
+
+#introductory p {
+    font-weight: 500;
+    opacity: 80%
+}
