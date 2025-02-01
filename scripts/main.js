@@ -21,3 +21,15 @@ window.onpointermove = (event) => {
 		{ duration: 3150, fill: "forwards" }
 	);
 };
+
+window.onload = () => {
+	const { clientX, clientY } = event;
+
+	circle.animate(
+		{
+			left: `${clientX}px`,
+			top: `${clientY}px`,
+		},
+		{ duration: 3150, fill: "forwards" }
+	);
+};
