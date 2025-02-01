@@ -30,9 +30,15 @@ await animate(
 );
 
 hover("#proceed", () => {
+	console.log("Hovered");
 	const circle = document.querySelector("#followCursor");
-	circle.style.clipPath = "polygon(0 40%, 60% 40%, 60% 0%, 100% 50%, 60% 100%, 60% 60%, 0 60%);"
+	circle.style.transition = "all 0.5s ease";
+	circle.style.transform = "scale(3)";
+	circle.style.clipPath =
+		"polygon(0 40%, 60% 40%, 60% 0%, 100% 50%, 60% 100%, 60% 60%, 0 60%)";
 
-	return () =>
-		circle.style.clipPath = "";
+	return () => {
+		circle.style.clipPath = "none";
+		circle.style.transform = "scale(1)";
+	};
 });

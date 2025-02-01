@@ -137,6 +137,7 @@ p {
 	z-index: 1;
 	user-select: none;
 	pointer-events: none;
+	clip-path: none;
 }
 
 /** Appearance */
