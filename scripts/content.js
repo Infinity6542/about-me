@@ -29,6 +29,8 @@ await animate(
 	{ delay: 0.5, ease: "cubic-bezier(.31,-0.01,.07,1.02)", duration: 1 }
 );
 
+document.body.style.overflow = "hidden";
+
 hover("#proceed", () => {
 	console.log("Hovered");
 	const circle = document.querySelector("#followCursor");
@@ -54,5 +56,6 @@ document.querySelector("#proceed").addEventListener("click", async () => {
 
 		]
 	];
+	document.body.style.overflow = "auto";
 	animate(sequence);
 });
