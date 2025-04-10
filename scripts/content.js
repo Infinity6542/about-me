@@ -56,6 +56,6 @@ document.querySelector("#proceed").addEventListener("click", async () => {
 
 		]
 	];
-	document.body.style.overflow = "auto";
+	document.body.style.overflowY = "auto";
 	animate(sequence);
 });
