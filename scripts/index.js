@@ -76,7 +76,7 @@ const typewriter = async () => {
 		await sleep(delay * 25);
 
 		// Make it look selected for rewrite
-		writeTo.style.background = "#0078d7";
+		writeTo.style.background = "#005ba3";
 		writeTo.style.setProperty("--content", "|");
 		await sleep(250);
 
@@ -104,10 +104,11 @@ const typewriter = async () => {
 	}
 };
 
-// Select
+//* Select dropdown menu
 let e = document.getElementById("select");
 let options = [];
 
+// Get all the elements to add them later
 e.getAttribute("data-options")
 	.split(",")
 	.forEach((option) => {
@@ -119,9 +120,10 @@ if (e.getAttribute("data-current") === "") {
 	e.innerText = options[0];
 }
 
+// Activate the menu upon click
 e.addEventListener("click", (event) => {
 	event.preventDefault();
-	event.stopPropagation();
+	event.stopImmediatePropagation();
 
 	function closeMenu() {
 		animate("#dropdown", { opacity: 0, scale: 0.8 }, { duration: 0.1 }).then(
@@ -138,10 +140,13 @@ e.addEventListener("click", (event) => {
 		return;
 	}
 
+	// Get position to know where to put the menu
 	function calcPos(e) {
 		let xy = e.getBoundingClientRect();
 		return [xy.left, xy.bottom];
 	}
+
+	// Creating the menu
 	const x = document.createElement("div");
 	x.id = "dropdown";
 	document.body.insertBefore(x, document.body.nextSibling);
@@ -163,7 +168,8 @@ e.addEventListener("click", (event) => {
 	y.classList.add("vert");
 	animate(y, { opacity: 1, scale: 1 }, { duration: 0.1 });
 	y.focus();
-	// y.style.width = "100px";
+
+	// Add the options to the menu
 	for (let i = 0; i < options.length; i++) {
 		let child = document.createElement("a");
 
