@@ -90,34 +90,40 @@ section {
 	transform: translateY(-25%);
 }
 
-.flyBy {
+.carousel {
 	position: absolute;
+	display: flex;
+	transform: translateY(100px);
+}
+
+.flyBy {
+	/* position: absolute; */
 	transform: translateY(10em);
-	animation: fly 100s linear infinite;
+	animation: fly 25s linear infinite;
 }
 
 @keyframes fly {
 	from {
-		transform: translate(0, 10em);
+		transform: translateX(0);
 	}
 	to {
-		transform: translate(-50%, 10em);
+		transform: translateX(-100%);
 	}
 }
 
-.flyBy ul {
+.carousel ul {
 	display: flex;
 	flex-direction: row;
 	gap: 20px;
 }
 
-.flyBy li {
+.carousel li {
 	list-style: none;
 	font-size: 2em;
 	white-space: nowrap;
 }
 
-.flyBy li::before {
+.carousel li::before {
 	content: "•";
 	margin-right: 20px;
 }
@@ -153,12 +159,12 @@ section {
 	border-top: 0;
 	border-left: 0;
 	border-right: 0;
-	border-image: linear-gradient(90deg,var(--accent1), var(--accent2)) 10;
+	border-image: linear-gradient(90deg, var(--accent1), var(--accent2)) 10;
 	cursor: pointer;
 }
 
 #next #select::after {
-	content: 'v';
+	content: "v";
 	float: right;
 	margin-right: 10px;
 	font-weight: 300;
