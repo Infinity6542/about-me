@@ -33,6 +33,7 @@ sleep(1000).then(async () => {
 
 // Next page
 async function prepForNextLoader(x) {
+	stopBuddy();
 	await animate(
 		"#followCursor",
 		{ height: "250vw", width: "250vw" },
@@ -149,13 +150,14 @@ e.addEventListener("click", (event) => {
 		position: "absolute",
 		top: `calc(200vh + ${calcPos(e)[1]}px)`,
 		left: `${calcPos(e)[0]}px`,
-		opacity: "0",
-		transform: "scale(.8)",
+		opacity: ".5",
+		transform: "scale(.5)",
 		marginTop: "10px",
 		padding: "5px",
 		borderRadius: "6px",
 		gap: "5px",
 		border: "1px solid var(--dimText)",
+		transformOrigin: "top center",
 	});
 	y.classList.add("flex");
 	y.classList.add("vert");
@@ -170,7 +172,7 @@ e.addEventListener("click", (event) => {
 		divider.style.width = "100%";
 
 		child.innerText = options[i].charAt(0).toUpperCase() + options[i].slice(1);
-		child.href = `javascript:void`;
+		child.href = `work.html`;
 		child.onclick = (event) => {
 			e.innerText = options[i];
 			animate(

@@ -10,7 +10,7 @@ function sleep(ms) {
 
 const circle = document.getElementById("followCursor");
 
-window.onpointermove = (event) => {
+let buddy = addEventListener("mousemove", (event) => {
 	const { clientX, clientY } = event;
 
 	circle.animate(
@@ -20,4 +20,8 @@ window.onpointermove = (event) => {
 		},
 		{ duration: 3150, fill: "forwards" }
 	);
-};
+});
+
+function stopBuddy() {
+	removeEventListener("mousemove", buddy);
+}
