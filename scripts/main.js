@@ -1,16 +1,10 @@
-// import {
-// 	animate,
-// 	stagger,
-// 	hover,
-// } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
-
 function sleep(ms) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 const circle = document.getElementById("followCursor");
 
-window.onpointermove = (event) => {
+let buddy = addEventListener("mousemove", (event) => {
 	const { clientX, clientY } = event;
 
 	circle.animate(
@@ -20,4 +14,8 @@ window.onpointermove = (event) => {
 		},
 		{ duration: 3150, fill: "forwards" }
 	);
-};
+});
+
+function stopBuddy() {
+	removeEventListener("mousemove", buddy);
+}
