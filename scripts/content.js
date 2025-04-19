@@ -34,8 +34,6 @@ await animate(
 
 document.body.style.overflow = "hidden";
 
-
-
 let circle = document.querySelector("#followCursor");
 hover("a, .bubble", () => {
 	animate(
