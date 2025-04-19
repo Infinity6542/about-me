@@ -6,11 +6,6 @@ import {
 	createIcons,
 	ArrowRight,
 } from "https://cdn.jsdelivr.net/npm/lucide@0.474.0/+esm";
-import {
-	interpolate,
-	fromCircle,
-	toCircle,
-} from "https://cdn.jsdelivr.net/npm/flubber@0.4.2/+esm";
 
 createIcons({
 	icons: {
