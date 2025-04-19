@@ -126,13 +126,13 @@ e.addEventListener("click", (event) => {
 	event.preventDefault();
 	event.stopImmediatePropagation();
 
-	function closeMenu() {
-		animate("#dropdown", { opacity: 0, scale: 0.8 }, { duration: 0.1 }).then(
+	async function closeMenu() {
+		document.body.removeEventListener("click", closeMenu);
+		await animate("#dropdown", { opacity: 0, scale: 0.8 }, { duration: 0.1 }).then(
 			() => {
 				document.querySelector("#dropdown").remove();
 			}
 		);
-		return;
 	}
 
 	// If a menu is already open, close it
@@ -214,10 +214,7 @@ e.addEventListener("click", (event) => {
 		// y.insertBefore(divider, y.nextSibling);
 	}
 	sleep(200).then(() => {
-		document.body.addEventListener("click", (event) => {
-			closeMenu();
-			return;
-		});
+		document.body.addEventListener("click", closeMenu);
 	});
 	y.addEventListener("click", (event) => {
 		event.stopPropagation();
