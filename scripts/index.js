@@ -209,7 +209,7 @@ e.addEventListener("click", (event) => {
 	y.addEventListener("click", (event) => {
 		event.stopPropagation();
 	});
-	hover("a", () => {
+	hover("a, #select", () => {
 		animate(
 			circle,
 			{ height: "20px", width: "20px" },
