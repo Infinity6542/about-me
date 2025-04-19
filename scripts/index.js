@@ -216,6 +216,7 @@ e.addEventListener("click", (event) => {
 	sleep(200).then(() => {
 		document.body.addEventListener("click", (event) => {
 			closeMenu();
+			return;
 		});
 	});
 	y.addEventListener("click", (event) => {
