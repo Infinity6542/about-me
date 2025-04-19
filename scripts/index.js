@@ -198,6 +198,7 @@ e.addEventListener("click", (event) => {
 			padding: "5px 50px 5px 20px",
 			lineHeight: "1.5",
 			borderRadius: "3px",
+			cursor: "pointer",
 		});
 		child.addEventListener("mouseover", (event) => {
 			event.target.style.transition = ".2s all ease-in-out";
