@@ -1,8 +1,9 @@
 import {
 	animate,
 	hover,
-	stagger
+	stagger,
 } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+import stopBuddy from "./main.js";
 
 export function sleep(ms) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
@@ -178,15 +179,17 @@ e.addEventListener("click", (event) => {
 		divider.style.width = "100%";
 
 		child.innerText = options[i].charAt(0).toUpperCase() + options[i].slice(1);
-		child.href = `work.html`;
+		// child.href = `work.html`;
 		child.onclick = (event) => {
-			e.innerText = options[i];
-			animate(
-				circle,
-				{ height: "250vw", width: "250vw" },
-				{ duration: 0.5 }
-			).then(() => {
-				prepForNextLoader(`/${options[i].replace(" ", "-")}.html`);
+			sleep(500).then(() => {
+				e.innerText = options[i];
+				animate(
+					circle,
+					{ height: "250vw", width: "250vw" },
+					{ duration: 0.5 }
+				).then(() => {
+					prepForNextLoader(`/${options[i].replace(" ", "-")}.html`);
+				});
 			});
 		};
 		Object.assign(child.style, {

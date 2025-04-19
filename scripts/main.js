@@ -4,10 +4,10 @@ function sleep(ms) {
 
 const circle = document.getElementById("followCursor");
 
-let buddy = addEventListener("mousemove", (event) => {
+let buddy = addEventListener("mousemove", async (event) => {
 	const { clientX, clientY } = event;
 
-	circle.animate(
+	await circle.animate(
 		{
 			left: `${clientX}px`,
 			top: `${clientY}px`,
@@ -19,3 +19,5 @@ let buddy = addEventListener("mousemove", (event) => {
 function stopBuddy() {
 	removeEventListener("mousemove", buddy);
 }
+
+export default stopBuddy;

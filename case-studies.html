@@ -11,9 +11,65 @@
 		<link rel="stylesheet" href="/styles/fonts.css" />
 		<link rel="stylesheet" href="/styles/main.css" />
 		<link rel="stylesheet" href="/styles/loading.css" />
-		<script src="https://www.unpkg.com/spltjs@1.1.0"></script>
-		<script src="/scripts/main.js" type="module" defer></script>
-		<script type="module" src="/scripts/notReady.js" defer></script>
+		<link rel="stylesheet" href="/styles/content.css" />
+		<script src="https://unpkg.com/lucide@latest" type="module" defer></script>
+		<script src="/scripts/main.js" type="module"></script>
+		<script src="/scripts/content.js" type="module" defer></script>
 	</head>
-	<body></body>
+	<body>
+		<div class="mobileOnly">
+			<img
+				src="/resources/img/proportions.svg"
+				alt="Proportions/Responsive design icon"
+			/>
+			<h1>Not quite there yet...</h1>
+			<p>
+				Unfortunately, mobile devices aren't supported yet. I understand this is
+				an inconvenience and aim to resolve this soon.
+			</p>
+		</div>
+		<div id="foreground">
+			<div class="preloader">
+				<div id="followCursor" class="loading fixed bgAccentBlue circle"></div>
+			</div>
+		</div>
+		<section id="layout">
+			<div id="introductory" class="flex vert">
+				<h1 class="halfAccent blue">Photos</h1>
+				<div class="description">
+					<p>
+						Here are some case studies, where I take a look at how various
+						systems and designs work.
+						<i data-lucide="arrow-right" id="proceed"></i>
+					</p>
+				</div>
+			</div>
+			<div id="items">
+				<div class="header">
+					<a href="../index.html?skipLoader=true">
+						<i data-lucide="arrow-left" id="back"></i
+					></a>
+				</div>
+				<div class="gradient"></div>
+				<div class="cards">
+					<div class="card">
+						<i
+							data-lucide="file-question"
+							style="height: 100px; width: 100px"
+						></i>
+						<h2>Not there just yet...</h2>
+						<p style="width: 75%; text-align: center">
+							Hi there! Unfortunately, this part hasn't been developed yet. As
+							you can see, it's partially complete, though many parts are still
+							in development. Have a great day!
+						</p>
+					</div>
+					<!-- <div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div> -->
+				</div>
+			</div>
+			<div class="blurryThing"></div>
+		</section>
+	</body>
 </html>

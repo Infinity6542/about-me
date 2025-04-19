@@ -5,11 +5,19 @@ import {
 import {
 	createIcons,
 	ArrowRight,
+	ArrowLeft,
+	FileQuestion,
+	SquareArrowOutUpRight,
+	Mail,
 } from "https://cdn.jsdelivr.net/npm/lucide@0.474.0/+esm";
 
 createIcons({
 	icons: {
 		ArrowRight,
+		ArrowLeft,
+		FileQuestion,
+		SquareArrowOutUpRight,
+		Mail,
 	},
 });
 
@@ -25,6 +33,25 @@ await animate(
 );
 
 document.body.style.overflow = "hidden";
+
+
+
+let circle = document.querySelector("#followCursor");
+hover("a, .bubble", () => {
+	animate(
+		circle,
+		{ height: "20px", width: "20px" },
+		{ duration: 0.75, type: "spring", bounce: 0.7 }
+	);
+
+	return () =>
+		animate(
+			circle,
+			{ height: "10px", width: "10px" },
+			{ duration: 0.75, type: "spring", bounce: 0.7 }
+		);
+});
+
 
 hover("#proceed", () => {
 	console.log("Hovered");
@@ -45,14 +72,12 @@ document.querySelector("#proceed").addEventListener("click", async () => {
 		[
 			"#introductory",
 			{ opacity: 0, translateY: -100 },
-			{ duration: .5, ease: "easeIn" },
+			{ duration: 0.5, ease: "easeIn" },
 		],
-		[
-
-		]
+		[],
 	];
 	document.body.style.overflowX = "hidden";
 	document.body.style.overflowY = "auto";
 	// animate(sequence);
-	window.scrollBy({left:0, top:window.innerHeight, behavior: "smooth"});
+	window.scrollBy({ left: 0, top: window.innerHeight, behavior: "smooth" });
 });

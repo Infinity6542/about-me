@@ -44,6 +44,7 @@ body {
     border-radius: 50%;
     filter: blur(300px);
     opacity: 25%;
+    z-index: -1;
 }
 
 /* Card content */
@@ -52,20 +53,54 @@ body {
     top: 100%;
     left: 50%;
     transform: translate(-50%, 0);
-    outline: solid 2px red;
+    /* outline: solid 2px red; */
+    width: 50vw;
+}
+
+.header {
+    --radius: 15px;
+    --border: 1px solid white;
+    height: 50px;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    border-top: var(--border);
+    border-left: var(--border);
+    border-right: var(--border);
+    padding: 20px;
+    display: flex;
+}
+
+.header a {
+    color: var(--text1);
+}
+
+.header > *{
+    aspect-ratio: 1/1;
+}
+
+.header .lucide {
+    height: 50px;
+    width: 50px;
 }
 
 .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-flow: row;
+    /* grid-template-columns: 1fr 1fr; */
     gap: 55px;
+    padding: 20px;
+    height: 75vh;
+    overflow: scroll;
 }
 
 .card {
-    min-width: 300px;
-    max-width: 400px;
-    aspect-ratio: 6/7;
-    outline: solid 2px limegreen;
-    justify-self: center;
+    /* aspect-ratio: 6/7; */
+    /* outline: solid 2px limegreen; */
+}
+
+/* Temp */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
