@@ -38,7 +38,7 @@ section {
 body {
 	background: var(--bg);
 	color: var(--text);
-	font-family: Satoshi;
+	font-family: Satoshi, sans-serif;
 	margin: 0;
 	overflow-x: hidden;
 }
@@ -76,13 +76,13 @@ span {
 }
 
 h1 {
-	font-family: Satoshi Variable;
+	font-family: Satoshi Variable, sans-serif;
 	font-weight: 700;
 	font-size: 5em;
 }
 
 h2 {
-	font-family: Satoshi Variable;
+	font-family: Satoshi Variable, sans-serif;
 	font-weight: 700;
 	font-size: 3em;
 }
@@ -92,7 +92,7 @@ p {
 }
 
 .fancy {
-	font-family: playfairDisplay;
+	font-family: playfairDisplay, serif;
 }
 
 .accentBlue {
