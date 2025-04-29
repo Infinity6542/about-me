@@ -50,7 +50,6 @@ hover("a, .bubble", () => {
 		);
 });
 
-
 hover("#proceed", () => {
 	console.log("Hovered");
 	const circle = document.querySelector("#followCursor");
@@ -65,17 +64,19 @@ hover("#proceed", () => {
 	};
 });
 
-document.querySelector("#proceed").addEventListener("click", async () => {
-	let sequence = [
-		[
-			"#introductory",
-			{ opacity: 0, translateY: -100 },
-			{ duration: 0.5, ease: "easeIn" },
-		],
-		[],
-	];
-	document.body.style.overflowX = "hidden";
-	document.body.style.overflowY = "auto";
-	// animate(sequence);
-	window.scrollBy({ left: 0, top: window.innerHeight, behavior: "smooth" });
-});
+if (document.querySelector("#proceed")) {
+	document.querySelector("#proceed").addEventListener("click", async () => {
+		let sequence = [
+			[
+				"#introductory",
+				{ opacity: 0, translateY: -100 },
+				{ duration: 0.5, ease: "easeIn" },
+			],
+			[],
+		];
+		document.body.style.overflowX = "hidden";
+		document.body.style.overflowY = "auto";
+		// animate(sequence);
+		window.scrollBy({ left: 0, top: window.innerHeight, behavior: "smooth" });
+	});
+}
