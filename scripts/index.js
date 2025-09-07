@@ -32,16 +32,6 @@ sleep(1000).then(async () => {
 	);
 });
 
-// Next page
-async function prepForNextLoader(x) {
-	stopBuddy();
-	await animate(
-		"#followCursor",
-		{ height: "250vw", width: "250vw" },
-		{ delay: 0.2, ease: "cubic-bezier(.31,-0.01,.07,1.02)", duration: 1 }
-	).then(() => (window.location = x));
-}
-
 // Typewriter effect on the index page, first section
 const roles = ["developer", "designer", "photographer"];
 const circle = document.getElementById("followCursor");
