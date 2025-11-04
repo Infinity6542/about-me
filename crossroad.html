@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>I'm James.</title>
+		<link
+			rel="stylesheet"
+			href="\resources\fonts\satoshi\Fonts\WEB\css\satoshi.css"
+		/>
+		<link rel="stylesheet" href="/styles/fonts.css" />
+		<link rel="stylesheet" href="/styles/main.css" />
+		<link rel="stylesheet" href="/styles/loading.css" />
+		<link rel="stylesheet" href="/styles/content.css" />
+		<script src="https://unpkg.com/lucide@latest" type="module" defer></script>
+		<script src="/scripts/main.js" type="module"></script>
+		<script src="/scripts/content.js" type="module" defer></script>
+		<style>
+			a {
+				text-decoration: underline;
+				color: inherit;
+				/* font-size: 1.5rem; */
+				display: flex;
+				align-items: end;
+			}
+
+			a p {
+				margin: 0;
+			}
+
+			.icon {
+				height: 1.5rem;
+				width: 1.5rem;
+				color: var(--text);
+			}
+
+			.list {
+				display: flex;
+				gap: 5px;
+				flex-direction: column;
+				margin-top: 2rem;
+				align-items: center;
+			}
+		</style>
+		<script>
+			const params = new URLSearchParams(window.location.search);
+			const to = params.get("to");
+			if (!to) {
+				// Do nothing
+			} else {
+				switch (to) {
+					case "portfolio":
+						window.location.href = "https://jchen.au/";
+						break;
+					case "photos":
+						window.location.href = "https://photos.jchen.au/";
+						break;
+					case "contacts":
+						window.location.href = "https://jchen.au/contacts.html";
+						break;
+					default:
+						// Do nothing
+						break;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="mobileOnly">
+			<img
+				src="/resources/img/proportions.svg"
+				alt="Proportions/Responsive design icon"
+			/>
+			<h1>Not quite there yet...</h1>
+			<p>
+				Unfortunately, mobile devices aren't supported yet. I understand this is
+				an inconvenience and aim to resolve this soon.
+			</p>
+		</div>
+		<div id="foreground">
+			<div class="preloader">
+				<div id="followCursor" class="loading fixed bgAccentBlue circle"></div>
+			</div>
+		</div>
+		<section id="layout">
+			<div id="introductory" class="flex vert">
+				<h1 class="halfAccent blue">Lost? Let me help.</h1>
+				<div class="list">
+					<a href="https://jchen.au/"
+						><p>Portfolio</p>
+					</a>
+					<a href="https://photos.jchen.au/"
+						><p>Photos</p>
+						<!-- <i data-lucide="arrow-right" class="icon"></i> -->
+					</a>
+					<a href="https://jchen.au/contacts.html"
+						><p>Give me a call</p>
+					</a>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

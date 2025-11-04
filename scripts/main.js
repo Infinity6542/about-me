@@ -33,4 +33,4 @@ async function prepForNextLoader(x) {
 	).then(() => (window.location = x));
 }
 
-export default stopBuddy;
+export default { stopBuddy };
