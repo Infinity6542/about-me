@@ -1,7 +1,7 @@
 import {
 	animate,
 	hover,
-} from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+} from "https://cdn.jsdelivr.net/npm/motion@12.23.27/+esm";
 import {
 	createIcons,
 	ArrowRight,

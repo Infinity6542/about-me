@@ -2,7 +2,7 @@ import {
 	animate,
 	hover,
 	stagger,
-} from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+} from "https://cdn.jsdelivr.net/npm/motion@12.23.27/+esm";
 
 const circle = document.getElementById("followCursor");
 
