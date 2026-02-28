@@ -32,7 +32,7 @@ await animate(
 	{ delay: 0.5, ease: "cubic-bezier(.31,-0.01,.07,1.02)", duration: 1 }
 );
 
-document.body.style.overflow = "hidden";
+document.body.style.overflowX = "hidden";
 
 let circle = document.querySelector("#followCursor");
 hover("a, .bubble", () => {

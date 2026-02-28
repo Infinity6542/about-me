@@ -66,14 +66,14 @@ body {
 }
 
 /** Font */
-p,
+/* p,
 h1,
 h2,
 h3,
 h4,
 span {
 	margin-top: 0;
-}
+} */
 
 h1 {
 	font-family: Satoshi Variable, sans-serif;
