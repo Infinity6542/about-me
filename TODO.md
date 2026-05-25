@@ -1,0 +1,3 @@
+- [ ] Rework animations and probably prefer native transitions/animations
+- [ ] Redesign and rework all pages, incl. mobile support
+- [ ] Rework the circle transition thing and just the follow-cursor circle in general
