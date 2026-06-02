@@ -1,128 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>I'm James.</title>
-		<link
-			rel="stylesheet"
-			href="\resources\fonts\satoshi\Fonts\WEB\css\satoshi.css"
-		/>
-		<link rel="stylesheet" href="/styles/fonts.css" />
-		<link rel="stylesheet" href="/styles/main.css" />
-		<link rel="stylesheet" href="/styles/loading.css" />
-		<link rel="stylesheet" href="/styles/index.css" />
-		<script src="https://www.unpkg.com/spltjs@1.1.0"></script>
-		<!-- <script src="/scripts/main.js" type="module" defer></script> -->
-		<script type="module" src="/scripts/index.js" defer></script>
-	</head>
-	<body>
-		<div class="mobileOnly">
-			<img
-				src="/resources/img/proportions.svg"
-				alt="Proportions/Responsive design icon"
-			/>
-			<h1>Not quite there yet...</h1>
-			<p>
-				Unfortunately, mobile devices aren't supported yet. I understand this is
-				an inconvenience and aim to resolve this soon.
-			</p>
-		</div>
-		<div id="foreground">
-			<div class="preloader">
-				<div id="followCursor" class="loading fixed bgAccentBlue circle"></div>
-				<h1 id="loading" class="loading">
-					<span>Hi.</span> <span>I'm James.</span>
-				</h1>
-			</div>
-		</div>
-		<section id="hero" class="flex">
-			<div class="">
-				<div class="heroTxt">
-					<h1>
-						I'm an
-						<span class="fancy halfAccent blue">amateur</span
-						><span id="role" class="accentBlue">Test</span>
-					</h1>
-					<div class="sfx">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="20"
-							height="20"
-							viewBox="0 0 20 20"
-							fill="none"
-						>
-							<path
-								d="M5.1761 18.0994L1.11938 1.79232C0.927477 1.02089 1.66888 0.344777 2.4194 0.606782L18.2066 6.11808C19.1377 6.44312 19.0859 7.77705 18.1325 8.02901L10.6633 10.0028C10.3521 10.085 10.0995 10.3121 9.98468 10.6128L7.08068 18.2148C6.73142 19.1291 5.41238 19.0492 5.1761 18.0994Z"
-								fill="#000201"
-								stroke="#F2F2F2"
-							/>
-						</svg>
-					</div>
-				</div>
-				<div class="heroBodyText">
-					<p class="desc">
-						Pleased to meet you. I’m 15 years old and based in Sydney,
-						Australia. I mostly create open-source projects, which I both design
-						and produce. At the moment, I’m learning Rust and Dart, with
-						skillsets in web development and design, graphics design, various
-						fields of technology and photography.
-					</p>
-				</div>
-			</div>
-		</section>
-		<section id="about">
-			<h1>
-				<span class="fancy halfAccent blue">Jack</span> of all trades<br /><span
-					class="fancy halfAccentTop green"
-					>Master</span
-				>
-				of none
-			</h1>
-			<div class="carousel">
-				<ul
-					class="flyBy"
-					data-elements="web development,mobile development,photography,UI/UX design,networking,marketing,web design,sponsorships,communication,graphics design"
-				>
-					<li>graphics design</li>
-					<li>web development</li>
-					<li>mobile development</li>
-					<li>photography</li>
-					<li>UI/UX design</li>
-					<li>networking</li>
-					<li>marketing</li>
-					<li>web design</li>
-					<li>sponsorships</li>
-					<li>communication</li>
-				</ul>
-				<ul class="flyBy" aria-hidden>
-					<li>graphics design</li>
-					<li>web development</li>
-					<li>mobile development</li>
-					<li>photography</li>
-					<li>UI/UX design</li>
-					<li>networking</li>
-					<li>marketing</li>
-					<li>web design</li>
-					<li>sponsorships</li>
-					<li>communication</li>
-				</ul>
-			</div>
-		</section>
-		<section id="next" class="flex vert">
-			<div class="flex vert">
-				<p>Enough about me.</p>
-				<div class="container">
-					<h2 class="select">
-						Take a look at my
-						<span
-							id="select"
-							data-options="work,case studies,photos,contacts"
-							data-current=""
-						></span>
-					</h2>
-				</div>
-			</div>
-		</section>
-	</body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I'm James.</title>
+  <link rel="stylesheet" href="\resources\fonts\satoshi\Fonts\WEB\css\satoshi.css" />
+  <link rel="stylesheet" href="/styles/fonts.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/loading.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <script src="https://www.unpkg.com/spltjs@1.1.0"></script>
+  <!-- <script src="/scripts/main.js" type="module" defer></script> -->
+  <script type="module" src="/scripts/index.js" defer></script>
+</head>
+
+<body>
+  <div class="mobileOnly">
+    <img src="/resources/img/proportions.svg" alt="Proportions/Responsive design icon" />
+    <h1>Not quite there yet...</h1>
+    <p>Mobile devices are yet to be supported... Sorry!
+    </p>
+  </div>
+  <div id="foreground">
+    <div class="preloader">
+      <div id="followCursor" class="loading fixed bgAccentBlue circle"></div>
+      <h1 id="loading" class="loading">
+        <span>Hi.</span> <span>I'm James.</span>
+      </h1>
+    </div>
+  </div>
+  <section id="hero" class="flex">
+    <div class="">
+      <div class="heroTxt">
+        <h1>
+          I'm an
+          <span class="fancy halfAccent blue">amateur</span><span id="role" class="accentBlue">Test</span>
+        </h1>
+        <div class="sfx">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M5.1761 18.0994L1.11938 1.79232C0.927477 1.02089 1.66888 0.344777 2.4194 0.606782L18.2066 6.11808C19.1377 6.44312 19.0859 7.77705 18.1325 8.02901L10.6633 10.0028C10.3521 10.085 10.0995 10.3121 9.98468 10.6128L7.08068 18.2148C6.73142 19.1291 5.41238 19.0492 5.1761 18.0994Z"
+              fill="#000201" stroke="#F2F2F2" />
+          </svg>
+        </div>
+      </div>
+      <div class="heroBodyText">
+        <p class="desc">
+          Pleased to meet you. I’m 16 years old and based in Sydney,
+          Australia. I mostly create open-source projects, which I both design
+          and produce. At the moment, I’m learning Rust and Dart, with
+          skillsets in web development and design, graphics design, various
+          fields of technology and photography.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <h1>
+      <span class="fancy halfAccent blue">Jack</span> of all trades<br /><span
+        class="fancy halfAccentTop green">Master</span>
+      of none
+    </h1>
+    <div class="carousel">
+      <ul class="flyBy"
+        data-elements="web development,mobile development,photography,UI/UX design,networking,marketing,web design,sponsorships,communication,graphics design">
+        <li>graphics design</li>
+        <li>web development</li>
+        <li>mobile development</li>
+        <li>photography</li>
+        <li>UI/UX design</li>
+        <li>networking</li>
+        <li>marketing</li>
+        <li>web design</li>
+        <li>sponsorships</li>
+        <li>communication</li>
+      </ul>
+      <ul class="flyBy" aria-hidden>
+        <li>graphics design</li>
+        <li>web development</li>
+        <li>mobile development</li>
+        <li>photography</li>
+        <li>UI/UX design</li>
+        <li>networking</li>
+        <li>marketing</li>
+        <li>web design</li>
+        <li>sponsorships</li>
+        <li>communication</li>
+      </ul>
+    </div>
+  </section>
+  <section id="next" class="flex vert">
+    <div class="flex vert">
+      <p>Enough about me.</p>
+      <div class="container">
+        <h2 class="select">
+          Take a look at my
+          <span id="select" data-options="work,case studies,photos,contacts" data-current=""></span>
+        </h2>
+      </div>
+    </div>
+  </section>
+</body>
+
 </html>
